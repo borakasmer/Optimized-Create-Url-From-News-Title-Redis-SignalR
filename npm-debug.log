@@ -1,0 +1,102 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '@aspnet/signalr-client',
+1 verbose cli   '–save' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.2
+4 verbose config Skipping project config: /Users/borakasmer/.npmrc. (matches userconfig)
+5 silly loadCurrentTree Starting
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly fetchPackageMetaData @aspnet/signalr-client
+9 silly fetchPackageMetaData –save
+10 silly fetchNamedPackageData @aspnet/signalr-client
+11 silly mapToRegistry name @aspnet/signalr-client
+12 silly mapToRegistry scope (from package name) @aspnet
+13 verbose mapToRegistry no registry URL found in name for scope @aspnet
+14 silly mapToRegistry using default registry
+15 silly mapToRegistry registry https://registry.npmjs.org/
+16 silly mapToRegistry data Result {
+16 silly mapToRegistry   raw: '@aspnet/signalr-client',
+16 silly mapToRegistry   scope: '@aspnet',
+16 silly mapToRegistry   escapedName: '@aspnet%2fsignalr-client',
+16 silly mapToRegistry   name: '@aspnet/signalr-client',
+16 silly mapToRegistry   rawSpec: '',
+16 silly mapToRegistry   spec: 'latest',
+16 silly mapToRegistry   type: 'tag' }
+17 silly mapToRegistry uri https://registry.npmjs.org/@aspnet%2fsignalr-client
+18 silly fetchOtherPackageData –save
+19 silly cache add args [ '–save', null ]
+20 verbose cache add spec –save
+21 verbose request uri https://registry.npmjs.org/@aspnet%2fsignalr-client
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 6:10:46 PM
+24 verbose request id 348b1b8d128daf54
+25 http request GET https://registry.npmjs.org/@aspnet%2fsignalr-client
+26 info retry will retry, error on last attempt: TypeError: The header content contains invalid characters
+27 silly cache add parsed spec Result {
+27 silly cache add   raw: '–save',
+27 silly cache add   scope: null,
+27 silly cache add   escapedName: null,
+27 silly cache add   name: null,
+27 silly cache add   rawSpec: '–save',
+27 silly cache add   spec: '/Users/borakasmer/Projects/codernews/–save',
+27 silly cache add   type: 'local' }
+28 error addLocal Could not install /Users/borakasmer/Projects/codernews/–save
+29 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/Users/borakasmer/Projects/codernews/–save'
+29 silly fetchPackageMetaData     at Error (native)
+29 silly fetchPackageMetaData  error for –save { Error: ENOENT: no such file or directory, open '/Users/borakasmer/Projects/codernews/–save'
+29 silly fetchPackageMetaData     at Error (native)
+29 silly fetchPackageMetaData   errno: -2,
+29 silly fetchPackageMetaData   code: 'ENOENT',
+29 silly fetchPackageMetaData   syscall: 'open',
+29 silly fetchPackageMetaData   path: '/Users/borakasmer/Projects/codernews/–save' }
+30 info attempt registry request try #2 at 6:10:56 PM
+31 http request GET https://registry.npmjs.org/@aspnet%2fsignalr-client
+32 info retry will retry, error on last attempt: TypeError: The header content contains invalid characters
+33 info attempt registry request try #3 at 6:11:56 PM
+34 http request GET https://registry.npmjs.org/@aspnet%2fsignalr-client
+35 silly fetchPackageMetaData TypeError: The header content contains invalid characters
+35 silly fetchPackageMetaData     at ClientRequest.OutgoingMessage.setHeader (_http_outgoing.js:359:11)
+35 silly fetchPackageMetaData     at new ClientRequest (_http_client.js:85:14)
+35 silly fetchPackageMetaData     at Object.exports.request (http.js:31:10)
+35 silly fetchPackageMetaData     at Object.exports.request (https.js:202:15)
+35 silly fetchPackageMetaData     at Request.start (/usr/local/lib/node_modules/npm/node_modules/request/request.js:740:32)
+35 silly fetchPackageMetaData     at Request.end (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1398:10)
+35 silly fetchPackageMetaData     at end (/usr/local/lib/node_modules/npm/node_modules/request/request.js:567:14)
+35 silly fetchPackageMetaData     at Immediate.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:581:7)
+35 silly fetchPackageMetaData     at runCallback (timers.js:672:20)
+35 silly fetchPackageMetaData     at tryOnImmediate (timers.js:645:5)
+35 silly fetchPackageMetaData  error for @aspnet/signalr-client TypeError: The header content contains invalid characters
+35 silly fetchPackageMetaData     at ClientRequest.OutgoingMessage.setHeader (_http_outgoing.js:359:11)
+35 silly fetchPackageMetaData     at new ClientRequest (_http_client.js:85:14)
+35 silly fetchPackageMetaData     at Object.exports.request (http.js:31:10)
+35 silly fetchPackageMetaData     at Object.exports.request (https.js:202:15)
+35 silly fetchPackageMetaData     at Request.start (/usr/local/lib/node_modules/npm/node_modules/request/request.js:740:32)
+35 silly fetchPackageMetaData     at Request.end (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1398:10)
+35 silly fetchPackageMetaData     at end (/usr/local/lib/node_modules/npm/node_modules/request/request.js:567:14)
+35 silly fetchPackageMetaData     at Immediate.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:581:7)
+35 silly fetchPackageMetaData     at runCallback (timers.js:672:20)
+35 silly fetchPackageMetaData     at tryOnImmediate (timers.js:645:5)
+36 silly rollbackFailedOptional Starting
+37 silly rollbackFailedOptional Finishing
+38 silly runTopLevelLifecycles Finishing
+39 silly install printInstalled
+40 verbose stack Error: ENOENT: no such file or directory, open '/Users/borakasmer/Projects/codernews/–save'
+40 verbose stack     at Error (native)
+41 verbose cwd /Users/borakasmer/Projects/codernews
+42 error Darwin 17.3.0
+43 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "@aspnet/signalr-client" "–save"
+44 error node v6.11.2
+45 error npm  v3.10.10
+46 error path /Users/borakasmer/Projects/codernews/–save
+47 error code ENOENT
+48 error errno -2
+49 error syscall open
+50 error enoent ENOENT: no such file or directory, open '/Users/borakasmer/Projects/codernews/–save'
+51 error enoent ENOENT: no such file or directory, open '/Users/borakasmer/Projects/codernews/–save'
+51 error enoent This is most likely not a problem with npm itself
+51 error enoent and is related to npm not being able to find a file.
+52 verbose exit [ -2, true ]

@@ -1,0 +1,37 @@
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Bora News Admin Sayfası</h2>
+        </div>
+        <div align="right"><b>@DateTime.Now</b></div>       
+        <form asp-controller="News" asp-action="SaveNews" method="post" enctype="multipart/form-data">
+        <div>             
+            <table class="table">                                
+                    <tr>                                                                                                                                                    
+                        <td>                                                   
+                            <b>Başlık :</b>
+                        </td>       
+                        <td>
+                            <input type="text" name="Title" id="Title">
+                        </td>                                       
+                    </tr>   
+                     <tr>                                                                                                                                                    
+                        <td>                                                   
+                            <b>Detay :</b>
+                        </td>       
+                        <td>
+                            <textarea rows="5" cols=120 name="Detail" id="Detail"></textarea>
+                        </td>                                       
+                    </tr>  
+                    <tr>
+                        <td>
+                            <b>Resim : </b>
+                        </td>
+                        <td>
+                             <input type="file" name="NewsImage" id="NewsImage"/>                             
+                        </td>
+                    </tr>                                                  
+            </table>         
+             <div align="center"><button type="submit" class="btn btn-success" style="width:50%" name="Image" id="Image">Kaydet</button></div>   
+        </div>
+        </form>
+    </div>

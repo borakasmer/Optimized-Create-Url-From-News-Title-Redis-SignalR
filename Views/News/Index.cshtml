@@ -1,0 +1,65 @@
+﻿<script src="js/signalr-client-1.0.0-alpha2-final.min.js"></script>
+<script>
+        let connection = new signalR.HubConnection('/newspush');
+        var modelData=@Html.Raw(Json.Serialize(Model));
+         connection.on('GetNews', data => {        
+            //console.log(JSON.stringify(data));
+            var div = document.getElementById('newsContent');
+            var html='<table class="table"><tr>';
+            modelData.splice(0, 0, data)            
+            for(var i=0;i<modelData.length;i++)
+            {
+                var news='';
+                /*console.log("i= "+i+ " Mod: "+((i) % 2) )
+                console.log("Div InnerHTML: " + html);*/
+                if (i!=0 && ((i) % 2) == 0)
+                {    
+                    //console.log(i+".");                                        
+                    news='</tr><tr>';
+                }  
+                news += '<td><a href="/' + modelData[i].urlTitle + '/' + modelData[i].id+'" target="_blank" style="text-decoration: none;"><h2>' + 
+                modelData[i].title + '</h2><div><img src="/images/' + modelData[i].image + '" width="500px"></div></a></td>'          
+                html += news
+            }
+            html+='</tr></table>';
+            div.innerHTML=html;
+            /*console.log("Div HTML : "+div.innerHTML);*/
+            //console.log("Model Data: "+ JSON.stringify(modelData));
+        });                 
+        connection.start()               
+</script>
+@model List<News>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Bora News Haberin İlk Adresi</h2>
+        </div>
+        <div align="right"><b>@Model.First().CreatedDate</b></div>
+        <div>            
+            <div id="newsContent"> 
+            <table class="table">                     
+                @{
+                     @:<tr>
+                    var count=0;
+                    foreach(var news in Model)
+                    {                                                                         
+                        if (count % 2 == 0)
+                        {                           
+                           @:</tr><tr>
+                        }                                                                                                                                                                                                                                
+                        <td>
+                        <a href="/@Url.FriendlyUrl(news.Title)/@news.ID" target="_blank" style="text-decoration: none;">
+                            <h2> @news.Title</h2>
+                            <div>
+                                <img src="/images/@news.Image" width="500px">
+                            </div>
+                        </a>
+                        </td>
+                        /* <span>Deneme : @count</span> */                                                                                                                               
+                        count++;
+                    }   
+                    @:</tr>                     
+                }             
+            </table>
+            </div>
+        </div>
+    </div>
